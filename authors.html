@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Литература</h1>
+        <div id="counter" class="counter"></div>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Поиск по имени автора...">
+            <select id="sort">
+                <option value="default">По умолчанию</option>
+                <option value="az">По имени (А-Я)</option>
+                <option value="za">По имени (Я-А)</option>
+            </select>
+        </div>
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab">Произведения</a>
+            <a href="poems.html" class="nav-tab">Стихи</a>
+            <a href="authors.html" class="nav-tab active">Авторы</a>
+        </div>
+    </header>
+
+    <main id="list"></main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+ <button id="scrollTopBtn" title="Наверх">↑</button>
+    <script src="authors.js"></script>
+    <script src="script.js"></script>
+   
+</body>
+</html>

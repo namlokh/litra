@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Стихи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Литература</h1>
+        <div id="counter" class="counter"></div>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Поиск по названию, автору или теме...">
+            <select id="sort">
+                <option value="default">По умолчанию</option>
+                <option value="az">По названию (А-Я)</option>
+                <option value="za">По названию (Я-А)</option>
+                <option value="author_az">По автору (А-Я)</option>
+                <option value="author_za">По автору (Я-А)</option>
+            </select>
+        </div>
+        <button id="toggleFavorites" class="toggle-themes">Избранное</button>
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab">Произведения</a>
+            <a href="poems.html" class="nav-tab active">Стихи</a>
+            <a href="authors.html" class="nav-tab">Авторы</a>
+        </div>
+    </header>
+
+    <div id="authorFilter" class="author-filter" style="display: none;">
+        <span id="authorName"></span>
+        <button id="clearAuthor" class="clear-author">✕ Сбросить</button>
+    </div>
+
+    <main id="list"></main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+<button id="scrollTopBtn" title="Наверх">↑</button>
+    <script src="poems.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

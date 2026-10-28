@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по литературе</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Литература</h1>
+<div id="counter" class="counter"></div>
+        <!-- Поиск и сортировка -->
+        <div class="controls">
+            <input type="text" id="search" placeholder="Поиск по названию, автору или теме...">
+            <select id="sort">
+                <option value="default">По умолчанию</option>
+                <option value="az">По названию (А-Я)</option>
+                <option value="za">По названию (Я-А)</option>
+                <option value="author_az">По автору (А-Я)</option>
+                <option value="author_za">По автору (Я-А)</option>
+            </select>
+        </div>
+
+        <!-- Кнопка "Все темы для сочинения" -->
+        <button id="openThemes" class="toggle-themes">Все темы для сочинения</button>
+        <button id="toggleFavorites" class="toggle-themes">Избранное</button>
+
+        <!-- Переключатель разделов -->
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-tab active">Произведения</a>
+            <a href="poems.html" class="nav-tab">Стихи</a>
+            <a href="authors.html" class="nav-tab">Авторы</a>
+        </div>
+    </header>
+
+    <!-- Плашка активного автора -->
+    <div id="authorFilter" class="author-filter" style="display: none;">
+        <span id="authorName"></span>
+        <button id="clearAuthor" class="clear-author">✕ Сбросить</button>
+    </div>
+
+    <!-- Список произведений -->
+    <main id="list"></main>
+
+    <!-- Модалка произведения -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Модалка "Все темы" -->
+    <div id="themesModal" class="themes-modal">
+        <div class="themes-modal-content">
+            <span class="close-themes" id="closeThemes">&times;</span>
+            <h3>Все темы для сочинения</h3>
+            <input type="text" id="themeSearch" class="theme-search" placeholder="Поиск темы...">
+            <div id="themesList" class="themes-list"></div>
+        </div>
+    </div>
+    <button id="scrollTopBtn" title="Наверх">↑</button>
+    <script src="works.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
